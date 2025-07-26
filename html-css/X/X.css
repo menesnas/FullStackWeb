@@ -1,0 +1,367 @@
+/* Reset ve temel stiller */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Ana container */
+.container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Logo */
+.left-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    position: relative;
+    min-height: 100vh;
+}
+
+.logo-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Büyük logo  */
+.logo-large {
+    width: 45%;
+    height: auto;
+    max-width: 400px;
+    min-width: 200px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+/* Küçük logo  */
+.logo-small {
+    display: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: #ffffff;
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem;
+    z-index: 1000;
+}
+
+/* Giriş formu */
+.right-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    padding: 5% 3%;
+    min-height: 100vh;
+}
+
+.content-wrapper {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Başlıklar */
+h1 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 3%;
+    line-height: 1;
+    margin-top: 10%;
+    max-width: 100%;
+}
+
+h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: 8%;
+    margin-top: 10%;
+}
+
+/* Auth butonları */
+.auth-buttons {
+    max-width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+    margin-bottom: 5%;
+}
+
+.google-btn,
+.apple-btn,
+.create-account-btn,
+.signin-btn {
+    width: 100%;
+    padding: 3% 5%;
+    border-radius: 50px;
+    border: 1px solid #536471;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+    transition: all 0.2s ease;
+    min-height: 48px;
+    margin-top: 2%;
+}
+
+.google-btn:hover,
+.apple-btn:hover {
+    background-color: rgb(234, 243, 255);
+}
+
+.create-account-btn {
+    color: #ffffff;
+    background-color: #1d9bf0;
+    border-color: #1d9bf0;
+    font-weight: 700;
+}
+
+.create-account-btn:hover {
+    background-color: #1a8cd8;
+}
+
+.signin-btn {
+    color: rgb(53, 129, 237);
+    background-color: transparent;
+    border-color: #536471;
+    font-weight: 700;
+}
+
+.signin-btn:hover {
+    background-color: rgba(29, 155, 240, 0.1);
+    border-color: #1d9bf0;
+}
+
+/* Ayırıcı */
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 4% 0;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: #536471;
+}
+
+.divider span {
+    padding: 0 4%;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+/* Şartlar metni */
+.terms-text {
+    font-size: 0.8rem;
+    color: #71767b;
+    line-height: 1.4;
+    margin-bottom: 8%;
+    max-width: 65%;
+}
+
+.terms-text a {
+    color: #1d9bf0;
+    text-decoration: none;
+}
+
+.terms-text a:hover {
+    text-decoration: underline;
+}
+
+/* Giriş bölümü */
+.signin-section {
+    margin-top: 10%;
+    max-width: 65%;
+}
+
+.signin-section p {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 3%;
+    font-weight: 500;
+}
+
+/* 1016px breakpoint - Ana responsive davranış */
+@media (max-width: 1016px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .left-section {
+        flex: none;
+        min-height: auto;
+        height: auto;
+        padding: 0;
+    }
+    
+    .logo-large {
+        display: none;
+    }
+    
+    .logo-small {
+        display: block;
+    }
+    
+    .right-section {
+        flex: 1;
+        padding-top: 10%;
+    }
+    
+    .content-wrapper {
+        max-width: 90%;
+    }
+}
+
+/* Tablet responsive */
+@media (max-width: 768px) {
+    .right-section {
+        padding: 8% 5%;
+    }
+    
+    .content-wrapper {
+        max-width: 95%;
+    }
+    
+    h1 {
+        font-size: clamp(1.8rem, 6vw, 3rem);
+    }
+    
+    h2 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+    
+    .auth-buttons {
+        gap: 4%;
+    }
+    
+    .google-btn,
+    .apple-btn,
+    .create-account-btn,
+    .signin-btn {
+        padding: 4% 6%;
+        font-size: clamp(0.85rem, 3vw, 0.95rem);
+    }
+}
+
+/* Mobil responsive */
+@media (max-width: 480px) {
+    .right-section {
+        padding: 6% 4%;
+    }
+    
+    .logo-small {
+        width: 2rem;
+        height: 2rem;
+        top: 1rem;
+        left: 1rem;
+    }
+    
+    h1 {
+        font-size: clamp(1.5rem, 7vw, 2.5rem);
+        margin-bottom: 5%;
+    }
+    
+    h2 {
+        font-size: clamp(1.3rem, 6vw, 1.8rem);
+        margin-bottom: 10%;
+    }
+    
+    .auth-buttons {
+        gap: 5%;
+        margin-bottom: 8%;
+    }
+    
+    .google-btn,
+    .apple-btn,
+    .create-account-btn,
+    .signin-btn {
+        padding: 5% 7%;
+        font-size: clamp(0.8rem, 3.5vw, 0.9rem);
+        gap: 5%;
+    }
+    
+    .terms-text {
+        font-size: 0.75rem;
+        margin-bottom: 10%;
+    }
+    
+    .signin-section {
+        margin-top: 12%;
+    }
+}
+
+/* Çok büyük ekranlar için */
+@media (min-width: 1400px) {
+    .logo-large {
+        max-width: 500px;
+    }
+    
+    .right-section {
+        padding: 3% 5%;
+    }
+    
+    .content-wrapper {
+        max-width: 450px;
+    }
+}
+
+/* Logo animasyon efektleri */
+@media (min-width: 1017px) {
+    .logo-large {
+        animation: logoFloat 6s ease-in-out infinite;
+    }
+}
+
+@keyframes logoFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2%);
+    }
+}
+
+/* Hover efektleri */
+.auth-buttons button:active {
+    transform: scale(0.98);
+}
+
+/* Focus states for accessibility */
+.google-btn:focus,
+.apple-btn:focus,
+.create-account-btn:focus,
+.signin-btn:focus {
+    outline: 2px solid #1d9bf0;
+    outline-offset: 2px;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}

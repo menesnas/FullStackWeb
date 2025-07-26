@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitch</title>
+    <link rel="stylesheet" href="Twitch.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="header-left">
+                <div class="logo">
+                    <img src="./img/logo.png" alt="Twitch Logo">
+                </div>
+                <nav class="main-navigation">
+                    <a href="#" class="nav-link active">Gözat</a>
+                </nav>
+            </div>
+            <div class="header-center">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Ara">
+                    <button class="search-button">
+                        <svg width="20" height="20" viewBox="0 0 20 20">
+                            <path d="m13.192 14.606a7 7 0 1 1 1.414-1.414l3.101 3.1-1.414 1.415-3.1-3.1ZM12 7A5 5 0 1 0 2 7a5 5 0 0 0 10 0Z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="header-right">
+                <button class="header-button">Kayıt Ol</button>
+                <button class="header-button primary">Oturum Aç</button>
+                <button class="user-menu">
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                        <path d="M10 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM3 18v-1a7 7 0 0 1 14 0v1H3Z"/>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Takip Edilen Kanallar</h3>
+                    <div class="followed-channels">
+                        <div class="channel-item">
+                            <div class="channel-avatar"></div>
+                            <span class="channel-name">rootthegamer</span>
+                            <span class="live-indicator">CANLI</span>
+                            <span class="viewer-count">2,6 B</span>
+                        </div>
+                        <div class="channel-item">
+                            <div class="channel-avatar"></div>
+                            <span class="channel-name">PUBG_BATTLEGROUNDS</span>
+                            <span class="live-indicator">CANLI</span>
+                            <span class="viewer-count">632</span>
+                        </div>
+                        <div class="channel-item">
+                            <div class="channel-avatar"></div>
+                            <span class="channel-name">Caedrel</span>
+                            <span class="live-indicator">CANLI</span>
+                            <span class="viewer-count">45 B</span>
+                        </div>
+                        <div class="channel-item">
+                            <div class="channel-avatar"></div>
+                            <span class="channel-name">ESLCS</span>
+                            <span class="live-indicator">CANLI</span>
+                            <span class="viewer-count">55,7 B</span>
+                        </div>
+                        <div class="channel-item">
+                            <div class="channel-avatar"></div>
+                            <span class="channel-name">Oilrats</span>
+                            <span class="live-indicator">CANLI</span>
+                            <span class="viewer-count">6,4 B</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Content Area -->
+            <div class="content-area">
+                <section class="featured-stream">
+                    <div class="featured-video">
+                        <div class="video-player">
+                            <div class="video-placeholder"></div>
+                            <div class="video-overlay">
+                                <span class="live-badge">CANLI</span>
+                            </div>
+                        </div>
+                        <div class="featured-info">
+                            <h2 class="featured-title">Twitch'te canlı</h2>
+                            <div class="featured-channels">
+                                <div class="featured-channel">
+                                    <div class="channel-thumbnail"></div>
+                                    <div class="channel-details">
+                                        <span class="channel-game">Counter-Strike</span>
+                                        <span class="channel-viewers">2,6 B izleyici</span>
+                                    </div>
+                                </div>
+                                <div class="featured-channel">
+                                    <div class="channel-thumbnail"></div>
+                                    <div class="channel-details">
+                                        <span class="channel-game">PUBG: BATTLEGROUNDS</span>
+                                        <span class="channel-viewers">632 izleyici</span>
+                                    </div>
+                                </div>
+                                <div class="featured-channel">
+                                    <div class="channel-thumbnail"></div>
+                                    <div class="channel-details">
+                                        <span class="channel-game">Escape from Tarkov</span>
+                                        <span class="channel-viewers">6,4 B izleyici</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="live-streams">
+                    <h2 class="section-title">Twitch'te canlı</h2>
+                    <div class="streams-grid">
+                        <div class="stream-card">
+                            <div class="stream-thumbnail">
+                                <div class="thumbnail-image"></div>
+                                <div class="stream-overlay">
+                                    <span class="live-badge">CANLI</span>
+                                    <span class="viewer-count">2,6 B izleyici</span>
+                                </div>
+                            </div>
+                            <div class="stream-info">
+                                <div class="streamer-avatar"></div>
+                                <div class="stream-details">
+                                    <h3 class="stream-title">CS:GO Turnuva Maçı</h3>
+                                    <p class="streamer-name">rootthegamer</p>
+                                    <p class="game-name">Counter-Strike</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stream-card">
+                            <div class="stream-thumbnail">
+                                <div class="thumbnail-image"></div>
+                                <div class="stream-overlay">
+                                    <span class="live-badge">CANLI</span>
+                                    <span class="viewer-count">632 izleyici</span>
+                                </div>
+                            </div>
+                            <div class="stream-info">
+                                <div class="streamer-avatar"></div>
+                                <div class="stream-details">
+                                    <h3 class="stream-title">PUBG Squad Oyunu</h3>
+                                    <p class="streamer-name">PUBG_BATTLEGROUNDS</p>
+                                    <p class="game-name">PUBG: BATTLEGROUNDS</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stream-card">
+                            <div class="stream-thumbnail">
+                                <div class="thumbnail-image"></div>
+                                <div class="stream-overlay">
+                                    <span class="live-badge">CANLI</span>
+                                    <span class="viewer-count">45 B izleyici</span>
+                                </div>
+                            </div>
+                            <div class="stream-info">
+                                <div class="streamer-avatar"></div>
+                                <div class="stream-details">
+                                    <h3 class="stream-title">League of Legends Analizi</h3>
+                                    <p class="streamer-name">Caedrel</p>
+                                    <p class="game-name">League of Legends</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stream-card">
+                            <div class="stream-thumbnail">
+                                <div class="thumbnail-image"></div>
+                                <div class="stream-overlay">
+                                    <span class="live-badge">CANLI</span>
+                                    <span class="viewer-count">55,7 B izleyici</span>
+                                </div>
+                            </div>
+                            <div class="stream-info">
+                                <div class="streamer-avatar"></div>
+                                <div class="stream-details">
+                                    <h3 class="stream-title">Esports Turnuvası</h3>
+                                    <p class="streamer-name">ESLCS</p>
+                                    <p class="game-name">Counter-Strike</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stream-card">
+                            <div class="stream-thumbnail">
+                                <div class="thumbnail-image"></div>
+                                <div class="stream-overlay">
+                                    <span class="live-badge">CANLI</span>
+                                    <span class="viewer-count">6,4 B izleyici</span>
+                                </div>
+                            </div>
+                            <div class="stream-info">
+                                <div class="streamer-avatar"></div>
+                                <div class="stream-details">
+                                    <h3 class="stream-title">Rust Survival</h3>
+                                    <p class="streamer-name">Oilrats</p>
+                                    <p class="game-name">Rust</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stream-card">
+                            <div class="stream-thumbnail">
+                                <div class="thumbnail-image"></div>
+                                <div class="stream-overlay">
+                                    <span class="live-badge">CANLI</span>
+                                    <span class="viewer-count">20,6 B izleyici</span>
+                                </div>
+                            </div>
+                            <div class="stream-info">
+                                <div class="streamer-avatar"></div>
+                                <div class="stream-details">
+                                    <h3 class="stream-title">PUBG Tournament</h3>
+                                    <p class="streamer-name">PUBG_BATTLE</p>
+                                    <p class="game-name">PUBG: BATTLEGROUNDS</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stream-card">
+                            <div class="stream-thumbnail">
+                                <div class="thumbnail-image"></div>
+                                <div class="stream-overlay">
+                                    <span class="live-badge">CANLI</span>
+                                    <span class="viewer-count">29,9 B izleyici</span>
+                                </div>
+                            </div>
+                            <div class="stream-info">
+                                <div class="streamer-avatar"></div>
+                                <div class="stream-details">
+                                    <h3 class="stream-title">CS Pro Match</h3>
+                                    <p class="streamer-name">ohnePixel</p>
+                                    <p class="game-name">Counter-Strike</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stream-card">
+                            <div class="stream-thumbnail">
+                                <div class="thumbnail-image"></div>
+                                <div class="stream-overlay">
+                                    <span class="live-badge">CANLI</span>
+                                    <span class="viewer-count">15,1 B izleyici</span>
+                                </div>
+                            </div>
+                            <div class="stream-info">
+                                <div class="streamer-avatar"></div>
+                                <div class="stream-details">
+                                    <h3 class="stream-title">CS2 Competitive</h3>
+                                    <p class="streamer-name">jLcs2</p>
+                                    <p class="game-name">Counter-Strike</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

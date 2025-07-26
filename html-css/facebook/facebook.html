@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Giriş yap veya kaydol</title>
+    <link rel="stylesheet" href="facebook.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="left-section">
+                <div>
+                    <img src="./img/Facebook-Logo.png" alt="Facebook" class="facebook-logo">
+                </div>
+                <div class="description">
+                    <p>Facebook tanıdıklarınla iletişim kurmanı ve hayatında olup bitenleri paylaşmanı sağlar.</p>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="login-form-container">
+                    <form class="login-form">
+                        <input type="email" placeholder="E-posta adresi veya telefon numarası" class="form-input">
+                        <input type="password" placeholder="Şifre" class="form-input">
+                        <button type="submit" class="login-btn">Giriş Yap</button>
+                        <a href="#" class="forgot-password">Şifreni mi unuttun?</a>
+                        <hr class="divider">
+                        <button type="button" class="create-account-btn">Yeni Hesap Oluştur</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-content">
+                <div class="page-links">
+                    <a href="#">Sayfa Oluştur</a>
+                    <span>ünlü kişiler, markalar veya işletmeler için.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="signupModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Kaydol</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <p class="modal-subtitle">Hızlı ve kolay.</p>
+            <form class="signup-form">
+                <div class="name-row">
+                    <input type="text" placeholder="Ad" class="form-input half-width">
+                    <input type="text" placeholder="Soyad" class="form-input half-width">
+                </div>
+                <input type="email" placeholder="E-posta adresi veya cep telefonu numarası" class="form-input">
+                <input type="password" placeholder="Yeni şifre" class="form-input">
+                
+                <div class="birthday-section">
+                    <label>Doğum tarihi</label>
+                    <div class="birthday-inputs">
+                        <select class="form-select">
+                            <option>Gün</option>
+                        </select>
+                        <select class="form-select">
+                            <option>Ay</option>
+                        </select>
+                        <select class="form-select">
+                            <option>Yıl</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="gender-section">
+                    <label>Cinsiyet</label>
+                    <div class="gender-options">
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="female">
+                            <span>Kadın</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="male">
+                            <span>Erkek</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="custom">
+                            <span>Özel</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="signup-btn">Kaydol</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Modal açma/kapama işlevleri
+        const createAccountBtn = document.querySelector('.create-account-btn');
+        const signupModal = document.getElementById('signupModal');
+        const closeBtn = document.querySelector('.close-btn');
+
+        createAccountBtn.addEventListener('click', () => {
+            signupModal.style.display = 'flex';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            signupModal.style.display = 'none';
+        });
+
+        signupModal.addEventListener('click', (e) => {
+            if (e.target === signupModal) {
+                signupModal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

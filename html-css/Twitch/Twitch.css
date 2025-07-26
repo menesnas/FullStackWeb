@@ -1,0 +1,645 @@
+/* Reset ve genel stiller */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roobert", "Helvetica Neue", Arial, sans-serif;
+    background-color: #0e0e10;
+    color: #efeff1;
+    line-height: 1.4;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Stilleri */
+.main-header {
+    background-color: #18181b;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #464649;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.logo img {
+    height: 30px;
+    width: auto;
+}
+
+.main-navigation {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: #efeff1;
+    text-decoration: none;
+    padding: 8px 16px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #9146ff;
+}
+
+
+.header-center {
+    flex: 1;
+    max-width: 400px;
+    margin: 0 20px;
+}
+
+.search-container {
+    display: flex;
+    position: relative;
+}
+
+.search-input {
+    flex: 1;
+    background-color: #464649;
+    border: 2px solid #464649;
+    border-radius: 6px 0 0 6px;
+    color: #efeff1;
+    padding: 8px 12px;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: #9146ff;
+}
+
+.search-input::placeholder {
+    color: #adadb8;
+}
+
+.search-button {
+    background-color: #464649;
+    border: 2px solid #464649;
+    border-left: none;
+    border-radius: 0 6px 6px 0;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: #efeff1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-button svg {
+    fill: #efeff1;
+}
+
+.search-button:hover {
+    background-color: #53535f;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-button {
+    background-color: #464649;
+    color: #efeff1;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.header-button:hover {
+    background-color: #53535f;
+}
+
+.header-button.primary {
+    background-color: #9146ff;
+    color: white;
+}
+
+.header-button.primary:hover {
+    background-color: #772ce8;
+}
+
+.user-menu {
+    background: none;
+    border: none;
+    color: #efeff1;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-menu svg {
+    fill: #efeff1;
+}
+
+.user-menu:hover {
+    background-color: #464649;
+}
+
+/* Ana İçerik Alanı */
+.main-content {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1920px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    background-color: #1f1f23;
+    border-radius: 6px;
+    padding: 16px;
+    height: fit-content;
+    flex-shrink: 0;
+}
+
+.sidebar-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #adadb8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.followed-channels {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.channel-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.channel-item:hover {
+    background-color: #464649;
+}
+
+.channel-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #9146ff, #772ce8);
+    flex-shrink: 0;
+}
+
+.channel-name {
+    font-weight: 600;
+    font-size: 14px;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.live-indicator {
+    background-color: #eb0400;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.viewer-count {
+    font-size: 12px;
+    color: #adadb8;
+    white-space: nowrap;
+}
+
+/* İçerik Alanı */
+.content-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Öne Çıkan Yayın */
+.featured-stream {
+    background-color: #1f1f23;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.featured-video {
+    display: flex;
+    height: 320px;
+}
+
+.video-player {
+    flex: 2;
+    position: relative;
+    background: linear-gradient(135deg, #464649, #1f1f23);
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #9146ff, #772ce8);
+    opacity: 0.1;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.live-badge {
+    background-color: #eb0400;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.featured-info {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.featured-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #efeff1;
+}
+
+.featured-channels {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.featured-channel {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.channel-thumbnail {
+    width: 60px;
+    height: 40px;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #9146ff, #772ce8);
+    opacity: 0.7;
+}
+
+.channel-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.channel-game {
+    font-weight: 600;
+    font-size: 14px;
+    color: #efeff1;
+}
+
+.channel-viewers {
+    font-size: 12px;
+    color: #adadb8;
+}
+
+/* Canlı Yayınlar Bölümü */
+.section-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #efeff1;
+}
+
+
+
+.stream-card {
+    background-color: #1f1f23;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.stream-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.stream-thumbnail {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+}
+
+.thumbnail-image {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #464649, #1f1f23);
+    position: relative;
+}
+
+.thumbnail-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #9146ff, #772ce8);
+    opacity: 0.3;
+}
+
+.stream-overlay {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.stream-overlay .live-badge {
+    background-color: #eb0400;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stream-overlay .viewer-count {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.stream-info {
+    padding: 12px;
+    display: flex;
+    gap: 10px;
+}
+
+.streamer-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #9146ff, #772ce8);
+    flex-shrink: 0;
+}
+
+.stream-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.stream-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #efeff1;
+    margin-bottom: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.streamer-name {
+    font-size: 13px;
+    color: #adadb8;
+    margin-bottom: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.game-name {
+    font-size: 12px;
+    color: #adadb8;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Responsive Tasarım */
+/* Full width - 1280px üstü: 4 tane yayın */
+.streams-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* 1280px - 1000px arası: 3 tane yayın */
+@media (max-width: 1280px) {
+    .streams-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+    
+    .main-content {
+        padding: 18px;
+        gap: 18px;
+    }
+    
+    .sidebar {
+        width: 220px;
+    }
+}
+
+/* 1000px - 700px arası: 2 tane yayın */
+@media (max-width: 1000px) {
+    .streams-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    
+    .main-content {
+        padding: 16px;
+        gap: 16px;
+    }
+    
+    .sidebar {
+        width: 200px;
+    }
+    
+    .featured-video {
+        height: 280px;
+    }
+    
+    .header-center {
+        max-width: 300px;
+    }
+    
+    .main-navigation {
+        gap: 16px;
+    }
+    
+    .nav-link {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
+
+/* 700px altında: 1 tane yayın */
+@media (max-width: 700px) {
+    .streams-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        padding: 8px 16px;
+    }
+    
+    .header-left {
+        gap: 16px;
+    }
+    
+    .main-navigation {
+        display: none;
+    }
+    
+    .header-center {
+        margin: 0 12px;
+    }
+    
+    .main-content {
+        flex-direction: column;
+        padding: 12px;
+    }
+    
+    .sidebar {
+        width: 100%;
+        order: 2;
+    }
+    
+    .content-area {
+        order: 1;
+    }
+    
+    .streams-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 12px;
+    }
+    
+    .featured-video {
+        height: auto;
+    }
+    
+    .video-player {
+        height: 180px;
+    }
+    
+    .featured-info {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 640px) {
+    .streams-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 10px;
+    }
+    
+    .stream-info {
+        padding: 10px;
+    }
+    
+    .header-right {
+        gap: 8px;
+    }
+    
+    .header-button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        padding: 8px 12px;
+    }
+    
+    .header-center {
+        margin: 0 8px;
+    }
+    
+    .streams-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 8px;
+    }
+    
+    .main-content {
+        padding: 8px;
+        gap: 12px;
+    }
+    
+    .sidebar {
+        padding: 12px;
+    }
+    
+    .video-player {
+        height: 150px;
+    }
+}
+
+@media (max-width: 400px) {
+    .streams-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .header-button:not(.primary) {
+        display: none;
+    }
+}
