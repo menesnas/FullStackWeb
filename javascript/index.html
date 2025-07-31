@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Todo List</h1>
+    
+    <div class="input-section">
+        <input type="text" id="todoInput" placeholder="Yeni görev yazın...">
+        <button onclick="addTodo()">Ekle</button>
+        <button onclick="clearInput()">Temizle</button>
+    </div>
+
+    <div id="successMessage" class="success-message">
+        Tüm görevler silindi.
+    </div>
+
+    <div class="todo-list">
+        <h3>Görevler</h3>
+        <div id="todoContainer"></div>
+        <button class="clear-all" onclick="clearAll()">Tümünü Sil</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
