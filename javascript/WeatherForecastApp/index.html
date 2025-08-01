@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-container">
+        <div class="search-container">
+            <input type="text" id="cityInput" placeholder="Search the city name">
+            <button id="searchBtn">🔍</button>
+        </div>
+        <div class="weather-container">
+            <div class="current-weather">
+                <h2 id="currentTitle">Current Weather in Paris</h2>
+                <div class="temperature" id="currentTemp">18.1°C</div>
+                <div class="weather-icon" id="currentIcon">☁️</div>
+                <div class="weather-desc" id="currentDesc">Broken Clouds</div>
+                <div class="weather-details">
+                    <div id="humidity">Humidity: 40%</div>
+                    <div id="windSpeed">Wind speed: 1.42km/h</div>
+                    <div id="currentDate">Monday, May 30, 2022</div>
+                </div>
+            </div>
+            <div class="forecast-weather">
+                <h2>5 Days Weather Forecast</h2>
+                <div class="forecast-container" id="forecastContainer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
