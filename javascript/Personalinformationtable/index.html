@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personel Bilgi Tablosu</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>Personel Bilgi Sistemi</h1>
+  </header>
+  <main>
+    <section class="form-section">
+
+      <form id="personelForm">
+        <div class="form-group">
+          <label for="id">ID</label>
+          <input type="text" id="id" name="id" readonly>
+          <button type="button" id="generateId">ID Oluştur</button>
+        </div>
+        <div class="form-group">
+          <label for="ad">Ad *</label>
+          <input type="text" id="ad" name="ad" required>
+        </div>
+        <div class="form-group">
+          <label for="soyad">Soyad *</label>
+          <input type="text" id="soyad" name="soyad" required>
+        </div>
+        <div class="form-group">
+          <label for="tc">T.C. *</label>
+          <input type="text" id="tc" name="tc" required maxlength="11">
+        </div>
+        <div class="form-group">
+          <label for="telefon">Telefon</label>
+          <input type="text" id="telefon" name="telefon">
+        </div>
+        <button type="submit" id="submitBtn">Gönder</button>
+        <div id="formWarn" class="alert alert-warning mt-3 py-2 px-3 small d-none"></div>
+      </form>
+      
+    </section>
+
+    <section class="search-section">
+      <input type="text" id="searchInput" placeholder="NO & ID ile ara...">
+      <button id="deleteAllBtn">Tümünü Sil</button>
+    </section>
+
+    <section class="table-section">
+      <table id="personelTable">
+        <thead>
+          <tr>
+            <th>NO</th>
+            <th>ID</th>
+            <th>AD</th>
+            <th>SOYAD</th>
+            <th>TC</th>
+            <th>TELEFON</th>
+            <th>İŞLEM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Kayıtlar buraya eklenecek -->
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
